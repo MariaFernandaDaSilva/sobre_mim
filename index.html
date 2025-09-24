@@ -1,0 +1,130 @@
+<!DOCTYPE html> <!-- Define o tipo do documento -->
+<html lang="pt-br"> <!-- Definindo que a partir daqui começa o conteúdo html e o idioma, mudar p ara pt-br -->
+<head> <!-- Tag abertura do head -->
+    <meta charset="UTF-8"> <!-- Configuração de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Alinhando o conteúdo dentro da página -->
+    <title>Maria Fernanda da Silva</title> <!-- Título do documento, aparece na guia do navegador -->
+
+    <style>
+
+        *{ 
+            /* Mostrar isso só depois da explicação de espaçamento */
+            margin: 0;
+            padding: 0;
+
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Configuração do header */
+        header{
+            height: 5rem;
+            background-color: #6e1e51;
+
+            padding-left: 3rem;
+            padding-right: 3rem;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Configuração dos links brancos */
+        .linkBranco{
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Configuração da "logo" do header */
+        .logoPagina{
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        /* Configurações da navegação dentro do header */
+        nav{
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* Configurações de banner */
+        .banner{
+            background-color: #67074a;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-image: url(imagens/banner.jpg);
+            background-position: center;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Configurações da maior frase do banner */
+        .maiorFraseBanner{
+            font-weight: 700;
+            color: white;
+            font-size: 60px;
+            text-align: center;
+        }
+
+        /* Configurações da menor frase do banner */
+        .menorFraseBanner{
+            /* font-weight: 500; */
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Configurações da seção que fala sobre mim */
+        .sobreMim{
+            padding: 3rem;
+        }
+
+        /* Configurações da minha foto */
+        .minhaFoto{
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+    </style>
+</head> <!-- Fechamento da tag head -->
+<body> <!-- Abertura da tag do corpo da página, o que irá aparecer para o usuário -->
+    <header> <!-- Abertura do cabeçalho da página -->
+
+        <a href="#" class="linkBranco logoPagina">Maria Fernanda</a> <!-- Link que sobe para o topo da página / Nome da página / Logo  -->
+
+        <nav> <!-- Abertura da navegação do site --> 
+
+            <a href="#" class="linkBranco">Sobre mim</a> <!-- Link para section de sobre mim --> 
+            <a href="#" class="linkBranco">Gostos</a> <!-- Link para section de Gostos -->
+            <a href="#" class="linkBranco">Habilidades</a> <!-- Link para section de habilidades -->
+            <a href="#" class="linkBranco"> Formações</a> <!-- Link para section de formações -->
+
+        </nav> <!-- Fechamento da navegação do site -->
+
+    </header> <!-- Fechamento do cabeçalho da página -->
+
+    <main> <!-- A partir daqui, começa o conteúdo principal do nosso site --> 
+
+        <section class="banner"> <!-- Seção que dá início ao espaço do banner -->
+            
+            <!-- Frases do banner -->
+            <p class="maiorFraseBanner">Olá, eu me chamo Maria Fernanda.</p>
+            <p class="menorFraseBanner">Estudante de Sistemas Para Internet na Fatec Taquaritinga</p>
+
+        </section>
+
+        <section class="sobreMim"> <!-- Seção que fala sobre mim -->
+
+            <!-- Minha foto -->
+            <img class="minhaFoto" src="imagens/foto_minha.jpg" alt="Minha foto">
+
+        </section>
+
+    </main> <!-- Fechamento do conteúdo principal -->
+    
+</body> <!-- Fechamento da tag body -->
+</html>
