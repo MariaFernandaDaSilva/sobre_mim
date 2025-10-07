@@ -1,55 +1,69 @@
 <!DOCTYPE html> <!-- Define o tipo do documento -->
-<html lang="pt-br"> <!-- Definindo que a partir daqui começa o conteúdo html e o idioma, mudar p ara pt-br -->
+<html lang="pt-br"> <!-- Definindo que a partir daqui começa o conteúdo html e o idioma, mudar para pt-br -->
+
 <head> <!-- Tag abertura do head -->
     <meta charset="UTF-8"> <!-- Configuração de caracteres -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Alinhando o conteúdo dentro da página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Alinhando o conteúdo dentro da página -->
     <title>Maria Fernanda da Silva</title> <!-- Título do documento, aparece na guia do navegador -->
 
     <style>
-
-        *{ 
+        * {
             /* Mostrar isso só depois da explicação de espaçamento */
             margin: 0;
             padding: 0;
 
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
         }
 
         /* Configuração do header */
-        header{
-            height: 5rem;
-            background-color: #6e1e51;
+        header {
+            background-color: #a4649b;
 
-            padding-left: 3rem;
-            padding-right: 3rem;
+            padding: 2rem;
+
+            gap: 2rem;
 
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
+        section {
+            padding: 4rem 1rem;
+        }
+
+        h1 {
+            color: #a4649b;
+        }
+
+        h2 {
+            margin-bottom: 2rem;
+        }
+
         /* Configuração dos links brancos */
-        .linkBranco{
+        .linkBranco {
             color: white;
             text-decoration: none;
         }
 
         /* Configuração da "logo" do header */
-        .logoPagina{
+        .logoPagina {
             font-size: 20px;
             font-weight: 600;
         }
 
         /* Configurações da navegação dentro do header */
-        nav{
+        nav {
             display: flex;
             gap: 2rem;
         }
 
         /* Configurações de banner */
-        .banner{
-            background-color: #67074a;
-            height: 85vh;
+        .banner {
+            background-color: #a4649b;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,11 +71,11 @@
 
             background-image: url(imagens/banner.jpg);
             background-position: center;
-            backdrop-filter: blur(10px);
+            background-size: cover;
         }
 
         /* Configurações da maior frase do banner */
-        .maiorFraseBanner{
+        .maiorFraseBanner {
             font-weight: 700;
             color: white;
             font-size: 60px;
@@ -69,7 +83,7 @@
         }
 
         /* Configurações da menor frase do banner */
-        .menorFraseBanner{
+        .menorFraseBanner {
             /* font-weight: 500; */
             color: white;
             font-size: 20px;
@@ -77,54 +91,475 @@
         }
 
         /* Configurações da seção que fala sobre mim */
-        .sobreMim{
-            padding: 3rem;
+        .sobreMim {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Configurações dos .texto */
+        .texto {
+            max-width: 60%;
+            text-align: center;
+            min-width: 250px;
         }
 
         /* Configurações da minha foto */
-        .minhaFoto{
+        .minhaFoto {
             width: 20rem;
             height: 20rem;
             border-radius: 50%;
             object-fit: cover;
         }
 
+        /* Configurações do pai dos botões */
+        .botoesGostos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            gap: 2rem;
+        }
+
+        /* Configurações do botão de escolha de gostos */
+        .botaoGosto {
+            font-size: 1rem;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 1rem;
+            width: 6rem;
+            min-width: 6rem;
+            background-color: #fadea9;
+            border: 2px #edcb8a solid;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Section de gostos */
+        .gostos {
+            width: 100%;
+            padding: 0;
+        }
+
+        /* Section dentro da section de gostos */
+        .sectionGostos {
+            background-color: #fadea9;
+            min-height: 50vh;
+            /* height: 50vh; */
+        }
+
+        .textoImagem {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .textoImagem p {
+            width: 30%;
+            text-align: justify;
+            min-width: 25rem;
+        }
+
+        .negrito {
+            font-weight: 500;
+        }
+
+        .textoImagem img {
+            height: 15rem;
+            border-radius: 20px;
+        }
+
+        #botaoHobby {
+            background-color: #f3c9e2;
+            border: #f7b5dc 2px solid;
+        }
+
+        #botaoLivro {
+            background-color: #a7bcdf;
+            border: #809fd4 2px solid;
+        }
+
+        #botaoComida {
+            background-color: #ffc8a3;
+            border: #f2b185 2px solid;
+        }
+
+        #serieSection {
+            display: block;
+        }
+
+        #hobbySection {
+            display: none;
+            background-color: #f3c9e2;
+        }
+
+        #livroSection {
+            display: none;
+            background-color: #a7bcdf;
+        }
+
+        #comidaSection {
+            display: none;
+            background-color: #ffc8a3;
+        }
+
+        .blocoHabilidade {
+            /* border: red 1px solid; */
+            padding: 2rem 20%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .habilidade {
+            font-size: 18px;
+            font-weight: 600;
+            width: 7rem;
+            text-align: left;
+        }
+
+        .barraHabilidade {
+            border: #c7c7c7 1px solid;
+            height: 1rem;
+            width: 80%;
+            border-radius: 0.5rem;
+            min-width: 250px;
+        }
+
+        .preenchimentoBarra {
+            height: 1rem;
+            /* width: 80%; */
+            border-radius: 0.5rem;
+            background-color: #a4649b;
+        }
+
+        #barraHtml {
+            width: 90%;
+        }
+
+        #barraCss {
+            width: 85%;
+        }
+
+        #barraJavascript {
+            width: 65%;
+        }
+
+        #formacoes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .blocoFormacao {
+            display: flex;
+            border: 1px solid #c7c7c7;
+            padding: 1rem;
+            width: 80%;
+            gap: 1rem;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .informacao {
+            width: 80%;
+            min-width: 80%;
+        }
+
+        .formacao {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .instituicao {
+            text-align: left;
+        }
+
+        .iconeFormacao {
+            height: 5rem;
+        }
+
+        /* Desktop grande */
+        @media (max-width: 1200px) {
+            .texto {
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .textoImagem {
+                flex-direction: column;
+            }
+
+
+        }
+
+        /* Tablet / Celulares Grandes */
+        @media (max-width: 770px) {
+
+            header {
+                flex-direction: column;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+
+            /* Configurações da maior frase do banner */
+            .maiorFraseBanner {
+                font-size: 40px;
+            }
+
+            /* Configurações da minha foto */
+            .minhaFoto {
+                width: 18rem;
+                height: 18rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            /* Configurações do pai dos botões */
+            .botoesGostos {
+                gap: 1rem;
+            }
+
+            .blocoHabilidade {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .habilidade {
+                text-align: center;
+            }
+
+            .iconeFormacao {
+                display: none;
+            }
+
+            .informacao {
+                width: 100%;
+                min-width: 100%;
+            }
+        }
+
+        /* Celulares Pequenos */
+        @media (max-width: 480px) {
+            .texto {
+                max-width: 80%;
+            }
+
+            /* Configurações da minha foto */
+            .minhaFoto {
+                width: 15rem;
+                height: 15rem;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .textoImagem p {
+                min-width: 250px;
+            }
+
+            .textoImagem img {
+                height: 10rem;
+            }
+
+            /* Configurações do pai dos botões */
+            .botoesGostos {
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
+
+        }
     </style>
 </head> <!-- Fechamento da tag head -->
+
 <body> <!-- Abertura da tag do corpo da página, o que irá aparecer para o usuário -->
     <header> <!-- Abertura do cabeçalho da página -->
 
-        <a href="#" class="linkBranco logoPagina">Maria Fernanda</a> <!-- Link que sobe para o topo da página / Nome da página / Logo  -->
+        <a href="#" class="linkBranco logoPagina">Maria Fernanda</a>
+        <!-- Link que sobe para o topo da página / Nome da página / Logo  -->
 
-        <nav> <!-- Abertura da navegação do site --> 
+        <nav> <!-- Abertura da navegação do site -->
 
-            <a href="#" class="linkBranco">Sobre mim</a> <!-- Link para section de sobre mim --> 
-            <a href="#" class="linkBranco">Gostos</a> <!-- Link para section de Gostos -->
-            <a href="#" class="linkBranco">Habilidades</a> <!-- Link para section de habilidades -->
+            <a href="#sobreMim" class="linkBranco">Sobre mim</a> <!-- Link para section de sobre mim -->
+            <a href="#gostos" class="linkBranco">Gostos</a> <!-- Link para section de Gostos -->
+            <a href="#habilidades" class="linkBranco">Habilidades</a> <!-- Link para section de habilidades -->
             <a href="#" class="linkBranco"> Formações</a> <!-- Link para section de formações -->
 
         </nav> <!-- Fechamento da navegação do site -->
 
     </header> <!-- Fechamento do cabeçalho da página -->
 
-    <main> <!-- A partir daqui, começa o conteúdo principal do nosso site --> 
+    <section class="banner"> <!-- Seção que dá início ao espaço do banner -->
 
-        <section class="banner"> <!-- Seção que dá início ao espaço do banner -->
-            
-            <!-- Frases do banner -->
-            <p class="maiorFraseBanner">Olá, eu me chamo Maria Fernanda.</p>
-            <p class="menorFraseBanner">Estudante de Sistemas Para Internet na Fatec Taquaritinga</p>
+        <!-- Frases do banner -->
+        <p class="maiorFraseBanner">Olá, eu me chamo Maria Fernanda.</p>
+        <p class="menorFraseBanner">Estudante de Sistemas Para Internet na Fatec Taquaritinga</p>
 
-        </section>
+    </section>
 
-        <section class="sobreMim"> <!-- Seção que fala sobre mim -->
+    <main> <!-- A partir daqui, começa o conteúdo principal do nosso site -->
+
+        <section id="sobreMim" class="sobreMim"> <!-- Seção que fala sobre mim -->
+
+            <h1 class="titulo"> Sobre mim </h1>
 
             <!-- Minha foto -->
             <img class="minhaFoto" src="imagens/foto_minha.jpg" alt="Minha foto">
 
+            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, necessitatibus repellat.
+                Illo dolorem, incidunt laudantium similique, ipsam laborum necessitatibus praesentium exercitationem
+                odit quasi doloremque ullam consequatur nam ex repudiandae. Est. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Labore alias magni quibusdam illo non ducimus nemo eveniet deleniti mollitia, possimus
+                adipisci saepe quisquam eligendi optio iure. Nihil dolores qui ab. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Tempora pariatur reprehenderit ut, repudiandae reiciendis iusto,
+                aspernatur est blanditiis veritatis id tenetur hic eum autem earum nisi nesciunt asperiores. Rerum,
+                numquam.</p>
+
+        </section>
+
+        <section class="gostos" id="gostos">
+
+            <div class="botoesGostos">
+
+                <button class="botaoGosto" id="botaoSerie">Série</button>
+                <button class="botaoGosto" id="botaoHobby">Hobby</button>
+                <button class="botaoGosto" id="botaoLivro">Livro</button>
+                <button class="botaoGosto" id="botaoComida">Comida</button>
+
+            </div>
+
+            <section class="sectionGostos" id="serieSection">
+
+                <h2>Minha série favorita</h2>
+
+                <div class="textoImagem">
+                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
+                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
+                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
+                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
+                        minus similique.</p>
+
+                    <img src="imagens/serie.jpg" alt="Imagem da família protagonista da série 'This Is Us'">
+                </div>
+
+            </section>
+
+            <section class="sectionGostos" id="hobbySection">
+
+                <h2>Meu hobby favorito</h2>
+
+                <div class="textoImagem">
+                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
+                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
+                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
+                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
+                        minus similique.</p>
+
+                    <img src="imagens/hobby.jpg" alt="Imagem de uma pessoa fazendo crochê">
+                </div>
+
+            </section>
+
+            <section class="sectionGostos" id="livroSection">
+
+                <h2>Meu livro favorito</h2>
+
+                <div class="textoImagem">
+                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
+                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
+                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
+                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
+                        minus similique.</p>
+
+                    <img src="imagens/jogosvorazes.png" alt="Imagem da série dos Jogos Vorazes">
+                </div>
+
+            </section>
+
+            <section class="sectionGostos" id="comidaSection">
+
+                <h2>Minha comida favorita</h2>
+
+                <div class="textoImagem">
+                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
+                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
+                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
+                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
+                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
+                        minus similique.</p>
+
+                    <img src="imagens/strogonoff.jpg"
+                        alt="Imagem de um prato de strogonoff de frango com uma porção de arroz e batata palha">
+                </div>
+
+            </section>
+
+        </section>
+
+        <section id="habilidades">
+
+            <h2>Habilidades</h2>
+
+            <div class="blocoHabilidade">
+                <p class="habilidade">HTML</p>
+                <div class="barraHabilidade">
+                    <div class="preenchimentoBarra" id="barraHtml"></div>
+                </div>
+            </div>
+
+            <div class="blocoHabilidade">
+                <p class="habilidade">CSS</p>
+                <div class="barraHabilidade">
+                    <div class="preenchimentoBarra" id="barraCss"></div>
+                </div>
+            </div>
+
+            <div class="blocoHabilidade">
+                <p class="habilidade">Javascript</p>
+                <div class="barraHabilidade">
+                    <div class="preenchimentoBarra" id="barraJavascript"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacoes">
+            <h2>Formações</h2>
+
+            <div class="blocoFormacao">
+                <div class="informacao">
+                    <p class="formacao">Ensino Médio Integrado ao Técnico em Informática Para Internet (2021 - 2023)</p>
+                    <p class="instituicao">ETEC Sylvio de Mattos Carvalho - Matão</p>
+                </div>
+
+                <img class="iconeFormacao" src="imagens/laptop_icone.svg" alt="Ícone de um notebook">
+            </div>
+
+            <div class="blocoFormacao">
+                <div class="informacao">
+                    <p class="formacao">Sistemas para Internet - Graduação (2024 - Atualmente)</p>
+                    <p class="instituicao">Fatec Taquaritinga - Taquaritinga</p>
+                </div>
+
+                <img class="iconeFormacao" src="imagens/nuvem_icone.svg" alt="Ícone de uma nuvem">
+            </div>
         </section>
 
     </main> <!-- Fechamento do conteúdo principal -->
-    
+
 </body> <!-- Fechamento da tag body -->
+
 </html>
