@@ -7,9 +7,10 @@
     <!-- Alinhando o conteúdo dentro da página -->
     <title>Maria Fernanda da Silva</title> <!-- Título do documento, aparece na guia do navegador -->
 
+    <!-- Aqui inicia o bloco de configurações em CSS -->
     <style>
+        /* Configuração para todas as coisas da página (o simbolo * indica TUDO) */
         * {
-            /* Mostrar isso só depois da explicação de espaçamento */
             margin: 0;
             padding: 0;
 
@@ -19,7 +20,7 @@
 
         /* Configuração do header */
         header {
-            background-color: #a4649b;
+            background-color: #7d1b70;
 
             padding: 2rem;
 
@@ -30,14 +31,17 @@
             align-items: center;
         }
 
+        /* Configuração de todos os sections da página */
         section {
             padding: 4rem 1rem;
         }
 
+        /* Configurações de todos os h1 */
         h1 {
-            color: #a4649b;
+            color: #7d1b70;
         }
 
+        /* Configuração de todos os h2 */
         h2 {
             margin-bottom: 2rem;
         }
@@ -62,7 +66,7 @@
 
         /* Configurações de banner */
         .banner {
-            background-color: #a4649b;
+            background-color: #7d1b70;
             height: 60vh;
             display: flex;
             flex-direction: column;
@@ -132,8 +136,8 @@
             padding: 1rem;
             width: 6rem;
             min-width: 6rem;
-            background-color: #fadea9;
-            border: 2px #edcb8a solid;
+            background-color: #f5c6ef;
+            border: 2px #dba3d3 solid;
             border-radius: 10px;
             font-weight: 600;
         }
@@ -146,11 +150,11 @@
 
         /* Section dentro da section de gostos */
         .sectionGostos {
-            background-color: #fadea9;
+            background-color: #f5c6ef;
             min-height: 50vh;
-            /* height: 50vh; */
         }
 
+        /* Configurações do grupo de texto + imagem, dentro da section de gostos */
         .textoImagem {
             display: flex;
             width: 100%;
@@ -160,63 +164,74 @@
             gap: 2rem;
         }
 
+        /* Configurações do TEXTO dentro do grupo de texto + imagem, dentro da section de gostos */
         .textoImagem p {
             width: 30%;
             text-align: justify;
             min-width: 25rem;
         }
 
+        /* Configurações da classe que deixa os textos em negrito */
         .negrito {
             font-weight: 500;
         }
 
+        /* Configurações da IMAGRM dentro do grupo de texto + imagem, dentro da section de gostos */
         .textoImagem img {
             height: 15rem;
             border-radius: 20px;
         }
 
+        /* Configurações do botão que mostra a seção de hobby favorito */
         #botaoHobby {
-            background-color: #f3c9e2;
-            border: #f7b5dc 2px solid;
+            background-color: #a6c8f5;
+            border: #7fa2d0 2px solid;
         }
 
+        /* Configurações do botão que mostra a seção de livro favorito */
         #botaoLivro {
-            background-color: #a7bcdf;
-            border: #809fd4 2px solid;
+            background-color: #f1b8d8;
+            border: #d999bd 2px solid;
         }
 
+        /* Configurações do botão que mostra a seção de comdia favorita */
         #botaoComida {
-            background-color: #ffc8a3;
-            border: #f2b185 2px solid;
+            background-color: #b5bdeb;
+            border: #8c97d2 2px solid;
         }
 
+        /* Configurações do botão que mostra a seção de série favorita */
         #serieSection {
             display: block;
         }
 
+        /* Configurações da seção de hobby favorito */
         #hobbySection {
-            display: none;
-            background-color: #f3c9e2;
-        }
-
-        #livroSection {
             display: none;
             background-color: #a7bcdf;
         }
 
-        #comidaSection {
+        /* Configurações da seção de livro favorito */
+        #livroSection {
             display: none;
-            background-color: #ffc8a3;
+            background-color: #f1b8d8;
         }
 
+        /* Configurações da seção de comida favorita */
+        #comidaSection {
+            display: none;
+            background-color: #b5bdeb;
+        }
+
+        /* Configurações do grupo de habilidades */
         .blocoHabilidade {
-            /* border: red 1px solid; */
             padding: 2rem 20%;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
+        /* Configurações do título da habilidade */
         .habilidade {
             font-size: 18px;
             font-weight: 600;
@@ -224,6 +239,7 @@
             text-align: left;
         }
 
+        /* Configurações da moldura da barra de habilidade */
         .barraHabilidade {
             border: #c7c7c7 1px solid;
             height: 1rem;
@@ -232,35 +248,43 @@
             min-width: 250px;
         }
 
+        /* Configurações do preenchimento da barra de habilidade */
         .preenchimentoBarra {
             height: 1rem;
-            /* width: 80%; */
             border-radius: 0.5rem;
-            background-color: #a4649b;
+            background-color: #7d1b70;
         }
 
+        /* Definindo a porcentagem da minha habilidade em HTML */
         #barraHtml {
             width: 90%;
         }
 
+        /* Definindo a porcentagem da minha habilidade em CSS */
         #barraCss {
             width: 85%;
         }
 
+        /* Definindo a porcentagem da minha habilidade em Javascript */
         #barraJavascript {
             width: 65%;
         }
 
+        /* Configurações da section de formações */
         #formacoes {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            background-color: #e9c2e3;
         }
 
+        /* Configurações dos blocos de formações */
         .blocoFormacao {
             display: flex;
-            border: 1px solid #c7c7c7;
+            border: 1px solid #da9dd1;
+            background-color: #f0cfeb;
+            border-radius: 1rem;
             padding: 1rem;
             width: 80%;
             gap: 1rem;
@@ -268,11 +292,13 @@
             margin-bottom: 1rem;
         }
 
+        /* Configurações do bloco de textos dentro de .bloco de formações */
         .informacao {
             width: 80%;
             min-width: 80%;
         }
 
+        /* Configurações do texto de formação */
         .formacao {
             font-size: 18px;
             font-weight: 600;
@@ -280,22 +306,35 @@
             margin-bottom: 1rem;
         }
 
+        /* Configurações do texto de instituição */
         .instituicao {
             text-align: left;
         }
 
+        /* Configurações do ícone dentro de formações */
         .iconeFormacao {
             height: 5rem;
         }
 
+        footer {
+            padding: 3rem;
+            background-color: #7d1b70;
+            color: white;
+        }
+
         /* Desktop grande */
         @media (max-width: 1200px) {
+
+            /* Configurações dos .texto */
             .texto {
                 max-width: 80%;
             }
         }
 
+        /* Notebooks */
         @media (max-width: 1024px) {
+
+            /* Configurações do grupo de texto + imagem, dentro da section de gostos */
             .textoImagem {
                 flex-direction: column;
             }
@@ -306,10 +345,12 @@
         /* Tablet / Celulares Grandes */
         @media (max-width: 770px) {
 
+            /* Configurações do header */
             header {
                 flex-direction: column;
             }
 
+            /* Configurações de nav */
             nav {
                 flex-direction: column;
             }
@@ -328,23 +369,27 @@
             }
 
             /* Configurações do pai dos botões */
-            .botoesGostos {
+            habilidade .botoesGostos {
                 gap: 1rem;
             }
 
+            /* Configurações do grupo de habilidades */
             .blocoHabilidade {
                 flex-direction: column;
                 gap: 1rem;
             }
 
+            /* Configurações do nome da habilidade */
             .habilidade {
                 text-align: center;
             }
 
+            /* Configurações do ícone dentro de formações */
             .iconeFormacao {
                 display: none;
             }
 
+            /* Configurações do grupo de texto dentro de formações */
             .informacao {
                 width: 100%;
                 min-width: 100%;
@@ -365,10 +410,12 @@
                 object-fit: cover;
             }
 
+            /* Configurações do TEXTO dentro do grupo de texto + imagem, dentro da section de gostos */
             .textoImagem p {
                 min-width: 250px;
             }
 
+            /* Configurações da IMAGEM dentro do grupo de texto + imagem, dentro da section de gostos */
             .textoImagem img {
                 height: 10rem;
             }
@@ -381,6 +428,8 @@
 
         }
     </style>
+    <!-- Fechamento do bloco de configurações em CSS -->
+
 </head> <!-- Fechamento da tag head -->
 
 <body> <!-- Abertura da tag do corpo da página, o que irá aparecer para o usuário -->
@@ -394,7 +443,7 @@
             <a href="#sobreMim" class="linkBranco">Sobre mim</a> <!-- Link para section de sobre mim -->
             <a href="#gostos" class="linkBranco">Gostos</a> <!-- Link para section de Gostos -->
             <a href="#habilidades" class="linkBranco">Habilidades</a> <!-- Link para section de habilidades -->
-            <a href="#" class="linkBranco"> Formações</a> <!-- Link para section de formações -->
+            <a href="#formacoes" class="linkBranco"> Formações</a> <!-- Link para section de formações -->
 
         </nav> <!-- Fechamento da navegação do site -->
 
@@ -406,160 +455,254 @@
         <p class="maiorFraseBanner">Olá, eu me chamo Maria Fernanda.</p>
         <p class="menorFraseBanner">Estudante de Sistemas Para Internet na Fatec Taquaritinga</p>
 
-    </section>
+    </section> <!-- Fechamento da seção do banner -->
 
     <main> <!-- A partir daqui, começa o conteúdo principal do nosso site -->
 
         <section id="sobreMim" class="sobreMim"> <!-- Seção que fala sobre mim -->
 
-            <h1 class="titulo"> Sobre mim </h1>
+            <h1 class="titulo"> Sobre mim </h1> <!-- Título principal da página  -->
 
             <!-- Minha foto -->
             <img class="minhaFoto" src="imagens/foto_minha.jpg" alt="Minha foto">
 
-            <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, necessitatibus repellat.
-                Illo dolorem, incidunt laudantium similique, ipsam laborum necessitatibus praesentium exercitationem
-                odit quasi doloremque ullam consequatur nam ex repudiandae. Est. Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Labore alias magni quibusdam illo non ducimus nemo eveniet deleniti mollitia, possimus
-                adipisci saepe quisquam eligendi optio iure. Nihil dolores qui ab. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Tempora pariatur reprehenderit ut, repudiandae reiciendis iusto,
-                aspernatur est blanditiis veritatis id tenetur hic eum autem earum nisi nesciunt asperiores. Rerum,
-                numquam.</p>
+            <!-- Texto falando sobre mim -->
+            <p class="texto">Olá! Meu nome é Maria Fernanda da Silva, tenho 19 anos e sou estudante de Sistemas para
+                Internet na Fatec de Taquaritinga. Concluí o curso técnico em Informática na ETEC Sylvio de Mattos
+                Carvalho, em Matão, onde desenvolvi uma base sólida em tecnologia, programação e desenvolvimento web.
+                Tenho conhecimentos em desenvolvimento web, principalmente HTML, CSS e JavaScript.
+                Sou uma pessoa proativa, dedicada e detalhista, gosto de trabalhar em equipe e estou sempre aberta a
+                aprender coisas novas.</p>
 
-        </section>
+        </section> <!-- Fechamento da seção que fala sobre mim -->
 
-        <section class="gostos" id="gostos">
+        <section class="gostos" id="gostos"> <!-- Ínicio da seção de Gostos / Coisas favoritas -->
 
             <div class="botoesGostos">
+                <!-- Inicio do agrupamento dos botões que trocam para cada seção de coisa favorita -->
 
-                <button class="botaoGosto" id="botaoSerie">Série</button>
-                <button class="botaoGosto" id="botaoHobby">Hobby</button>
-                <button class="botaoGosto" id="botaoLivro">Livro</button>
-                <button class="botaoGosto" id="botaoComida">Comida</button>
+                <button class="botaoGosto" id="botaoSerie" onclick="botaoSerie()">Série</button>
+                <!-- Botão que ao clicar mostra a seção de série favorita -->
+                <button class="botaoGosto" id="botaoHobby" onclick="botaoHobby()">Hobby</button>
+                <!-- Botão que ao clicar mostra a seção de Hobby favorito -->
+                <button class="botaoGosto" id="botaoLivro" onclick="botaoLivro()">Livro</button>
+                <!-- Botão que ao clicar mostra a seção de Livro favorito -->
+                <button class="botaoGosto" id="botaoComida" onclick="botaoComida()">Comida</button>
+                <!-- Botão que ao clicar mostra a seção de Comida favorita -->
 
-            </div>
+            </div> <!-- Fechamento do agrupamento dos botões que trocam para cada seção de coisa favorita -->
 
-            <section class="sectionGostos" id="serieSection">
 
-                <h2>Minha série favorita</h2>
+            <section class="sectionGostos" id="serieSection"> <!-- Inicio da seção de série favorita -->
 
-                <div class="textoImagem">
-                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
-                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
-                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
-                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
-                        minus similique.</p>
+                <h2>Minha série favorita</h2> <!-- Título da seção -->
 
+                <div class="textoImagem"> <!-- Início do grupo de texto + imagem -->
+
+                    <!-- Texto sobre a série -->
+                    <p> <span class="negrito">"This Is Us"</span>  é uma série emocionante que acompanha a vida da família Pearson ao longo de várias décadas, explorando os altos e baixos que moldam quem eles são. Com uma narrativa não linear, a trama alterna entre passado, presente e futuro, revelando como pequenas decisões e eventos impactam profundamente a trajetória de cada personagem. A série destaca temas universais como amor, perda, identidade e perdão, conquistando o público por sua sensibilidade e profundidade emocional. Com atuações marcantes e roteiros tocantes, "This Is Us" mostra que cada história de vida é única, mas todas compartilham a beleza e a dor de ser humano.</p>
+
+                    <!-- Imagem da série -->
                     <img src="imagens/serie.jpg" alt="Imagem da família protagonista da série 'This Is Us'">
-                </div>
+                </div> <!-- Fechamento do grupo de texto + imagem -->
 
-            </section>
+            </section> <!-- Fechamento da seção de série favorita -->
 
-            <section class="sectionGostos" id="hobbySection">
 
-                <h2>Meu hobby favorito</h2>
+            <section class="sectionGostos" id="hobbySection"> <!-- Inicio da seção de hpbby favorito -->
 
-                <div class="textoImagem">
-                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
-                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
-                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
-                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
-                        minus similique.</p>
+                <h2>Meu hobby favorito</h2> <!-- Título da seção -->
 
+                <div class="textoImagem"> <!-- Início do grupo de texto + imagem -->
+
+                    <!-- Texto sobre o hobby -->
+                    <p> O <span class="negrito">crochê</span>  é um hobby criativo e relaxante que combina paciência, concentração e expressão artística. Utilizando apenas uma agulha e fios de diferentes cores e texturas, é possível criar peças únicas, como roupas, acessórios e itens de decoração. Além de ser uma forma de terapia, ajudando a aliviar o estresse e a ansiedade, o crochê também estimula a coordenação motora e a criatividade. Muitas pessoas encontram nesse passatempo uma maneira de desconectar do mundo digital e se dedicar a algo manual e gratificante, transformando simples fios em verdadeiras obras de arte feitas com carinho e dedicação.</p>
+
+                    <!-- Imagem do hobby -->
                     <img src="imagens/hobby.jpg" alt="Imagem de uma pessoa fazendo crochê">
-                </div>
+                </div> <!-- Fechamento do grupo de texto + imagem -->
 
-            </section>
+            </section> <!-- Fechamento da seção de série favorita -->
 
-            <section class="sectionGostos" id="livroSection">
 
-                <h2>Meu livro favorito</h2>
+            <section class="sectionGostos" id="livroSection"> <!-- Inicio da seção de livro favorito -->
 
-                <div class="textoImagem">
-                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
-                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
-                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
-                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
-                        minus similique.</p>
+                <h2>Meu livro favorito</h2> <!-- Título da seção -->
 
+                <div class="textoImagem"> <!-- Início do grupo de texto + imagem -->
+
+                    <!-- Texto sobre o livro -->
+                    <p> Os livros e filmes de <span class="negrito">"Jogos Vorazes"</span>   apresentam uma história intensa e cheia de crítica social, ambientada em um futuro distópico onde o país de Panem é dividido entre distritos oprimidos e uma Capital poderosa. Escrita por Suzanne Collins, a trilogia acompanha Katniss Everdeen, uma jovem corajosa que se torna símbolo de resistência após se voluntariar para participar dos jogos — um evento brutal em que jovens lutam até a morte transmitidos como entretenimento. Tanto os livros quanto os filmes conquistaram milhões de fãs ao retratar temas como desigualdade, manipulação política, coragem e esperança diante da opressão.</p>
+
+                    <!-- Imagem do livro -->
                     <img src="imagens/jogosvorazes.png" alt="Imagem da série dos Jogos Vorazes">
-                </div>
+                </div> <!-- Fechamento do grupo de texto + imagem -->
 
-            </section>
+            </section> <!-- Fechamento da seção de série favorita -->
 
-            <section class="sectionGostos" id="comidaSection">
 
-                <h2>Minha comida favorita</h2>
+            <section class="sectionGostos" id="comidaSection"> <!-- Inicio da seção de comida favorita -->
 
-                <div class="textoImagem">
-                    <p> <span class="negrito">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Excepturi
-                        ducimus nam ullam dolore ex molestiae maxime voluptates eum optio consequatur, natus distinctio,
-                        reprehenderit tempore ipsum reiciendis quia nobis! Ullam, consequatur!Lorem Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Optio facilis eveniet quasi aperiam animi consequuntur
-                        aut delectus. Hic enim iure assumenda vel fugit explicabo molestiae sapiente maxime, commodi
-                        minus similique.</p>
+                <h2>Minha comida favorita</h2> <!-- Título da seção -->
 
+                <div class="textoImagem"> <!-- Início do grupo de texto + imagem -->
+
+                    <!-- Texto sobre a comida -->
+                    <p> O <span class="negrito">strogonoff de frango </span>  é um dos pratos mais queridos da culinária brasileira, conhecido por seu sabor cremoso e irresistível. Feito com pedaços de frango refogados e envolvidos em um molho à base de creme de leite, ketchup e mostarda, ele combina simplicidade e muito sabor. Geralmente é servido com arroz branco e batata palha, criando uma mistura perfeita de texturas e temperos. Apesar de ter origem russa, o strogonoff ganhou um toque especial no Brasil, tornando-se presença certa em almoços de família, festas e refeições do dia a dia. É uma comida reconfortante, prática e que agrada a todos os paladares.</p>
+
+                    <!-- Imagem da comida -->
                     <img src="imagens/strogonoff.jpg"
                         alt="Imagem de um prato de strogonoff de frango com uma porção de arroz e batata palha">
-                </div>
+                </div> <!-- Fechamento do grupo de texto + imagem -->
 
-            </section>
+            </section><!-- Fechamento da seção de série favorita -->
 
-        </section>
 
-        <section id="habilidades">
+        </section> <!-- Fechamento da seção de Gostos / Coisas favoritas -->
 
-            <h2>Habilidades</h2>
+        <section id="habilidades"> <!-- Ínicio da seção das minhas habilidades -->
 
-            <div class="blocoHabilidade">
-                <p class="habilidade">HTML</p>
-                <div class="barraHabilidade">
-                    <div class="preenchimentoBarra" id="barraHtml"></div>
-                </div>
-            </div>
+            <h2>Habilidades</h2> <!-- Título da seção -->
+
+            <!-- Cada "div" é um bloco ou caixinha usada para organizar o conteúdo -->
 
             <div class="blocoHabilidade">
-                <p class="habilidade">CSS</p>
-                <div class="barraHabilidade">
-                    <div class="preenchimentoBarra" id="barraCss"></div>
-                </div>
-            </div>
+                <!-- Íncio do grupo de nome da habilidade + outro grupo que monta a barra de progresso -->
+                <p class="habilidade">HTML</p> <!-- Parágrafo com o nome da habilidade -->
+                <div class="barraHabilidade"> <!-- Ínicio da parte de fora da barra, a "moldura" da barrinha  -->
+                    <div class="preenchimentoBarra" id="barraHtml"></div> <!-- Preenchimento da barrinha -->
+                </div> <!-- Fechamento da parte de fora da barra, a "moldura" da barrinha  -->
+            </div> <!-- Fechamento do grupo de nome da habilidade + outro grupo que monta a barra de progresso -->
 
             <div class="blocoHabilidade">
-                <p class="habilidade">Javascript</p>
-                <div class="barraHabilidade">
-                    <div class="preenchimentoBarra" id="barraJavascript"></div>
-                </div>
-            </div>
-        </section>
+                <!-- Íncio do grupo de nome da habilidade + outro grupo que monta a barra de progresso -->
+                <p class="habilidade">CSS</p> <!-- Parágrafo com o nome da habilidade -->
+                <div class="barraHabilidade"> <!-- Ínicio da parte de fora da barra, a "moldura" da barrinha  -->
+                    <div class="preenchimentoBarra" id="barraCss"></div> <!-- Preenchimento da barrinha -->
+                </div> <!-- Fechamento da parte de fora da barra, a "moldura" da barrinha  -->
+            </div> <!-- Fechamento do grupo de nome da habilidade + outro grupo que monta a barra de progresso -->
 
-        <section id="formacoes">
-            <h2>Formações</h2>
+            <div class="blocoHabilidade">
+                <!-- Íncio do grupo de nome da habilidade + outro grupo que monta a barra de progresso -->
+                <p class="habilidade">Javascript</p> <!-- Parágrafo com o nome da habilidade -->
+                <div class="barraHabilidade"> <!-- Ínicio da parte de fora da barra, a "moldura" da barrinha  -->
+                    <div class="preenchimentoBarra" id="barraJavascript"></div> <!-- Preenchimento da barrinha -->
+                </div> <!-- Fechamento da parte de fora da barra, a "moldura" da barrinha  -->
+            </div> <!-- Fechamento do grupo de nome da habilidade + outro grupo que monta a barra de progresso -->
 
-            <div class="blocoFormacao">
-                <div class="informacao">
+        </section> <!-- Fechamento da seção das minhas habilidades -->
+
+        <section id="formacoes"> <!-- Abertura da seção de formações que eu tenho -->
+
+            <h2>Formações</h2> <!-- Título da seção -->
+
+            <div class="blocoFormacao"> <!-- Abertura do grupo: grupos dos textos + imagem -->
+                <div class="informacao"> <!-- Abertura do grupo de textos de formação + instituição -->
                     <p class="formacao">Ensino Médio Integrado ao Técnico em Informática Para Internet (2021 - 2023)</p>
+                    <!-- Texto informando a formação -->
                     <p class="instituicao">ETEC Sylvio de Mattos Carvalho - Matão</p>
-                </div>
+                    <!-- Texto informando a instituição da formação -->
+                </div> <!-- Fechamento do grupo de textos de formação + instituição -->
 
+                <!-- Ícone relacionado a área de formação -->
                 <img class="iconeFormacao" src="imagens/laptop_icone.svg" alt="Ícone de um notebook">
-            </div>
 
-            <div class="blocoFormacao">
-                <div class="informacao">
+            </div> <!-- Fechamento do grupo dos grupos dos textos + imagem -->
+
+            <div class="blocoFormacao"> <!-- Abertura do grupo dos grupos dos textos + imagem -->
+                <div class="informacao"> <!-- Abertura do grupo de textos de formação + instituição -->
                     <p class="formacao">Sistemas para Internet - Graduação (2024 - Atualmente)</p>
+                    <!-- Texto informando a formação -->
                     <p class="instituicao">Fatec Taquaritinga - Taquaritinga</p>
-                </div>
+                    <!-- Texto informando a instituição da formação -->
+                </div> <!-- Fechamento do grupo de textos de formação + instituição -->
 
+                <!-- Ícone relacionado a área de formação -->
                 <img class="iconeFormacao" src="imagens/nuvem_icone.svg" alt="Ícone de uma nuvem">
-            </div>
-        </section>
+
+            </div> <!-- Fechamento do grupo dos grupos dos textos + imagem -->
+
+        </section> <!-- Fechamento da seção de formações que eu tenho -->
 
     </main> <!-- Fechamento do conteúdo principal -->
 
+    <footer> <!-- Abertura da tag de footer -->
+
+        <!-- Texto que fica no footer -->
+        <p>Todos os direitos reservados.</p>
+
+    </footer> <!-- Fechamento da tag de footer -->
+
+    <!-- Aqui começa o Javascript -->
+    <script>
+
+        // Criando variáveis pegando os botões pelos IDs
+        let serieSection = document.getElementById("serieSection");
+        let hobbySection = document.getElementById("hobbySection");
+        let comidaSection = document.getElementById("comidaSection");
+        let livroSection = document.getElementById("livroSection");
+
+        // Função do clique do botão da seção de Série favorita
+        function botaoSerie() {
+
+            // Todos as seções desaparecem
+            hobbySection.style.display = "none";
+            comidaSection.style.display = "none";
+            livroSection.style.display = "none";
+
+            // A seção de série favorita aparece
+            serieSection.style.display = "block";
+
+            // Teste para ver se o clique funcionou
+            console.log("Clicou no botão de série.")
+        }
+
+        // Função do clique do botão da seção de hobby favorito
+        function botaoHobby() {
+
+            // Todos as seções desaparecem
+            serieSection.style.display = "none";
+            comidaSection.style.display = "none";
+            livroSection.style.display = "none";
+
+            // A seção de hobby favorito aparece
+            hobbySection.style.display = "block";
+        
+            // Teste para ver se o clique funcionou
+            console.log("Clicou no botão de hobby.")
+        }
+
+        // Função do clique do botão da seção de comida favorita
+        function botaoComida() {
+
+            // Todos as seções desaparecem
+            serieSection.style.display = "none";
+            hobbySection.style.display = "none";
+            livroSection.style.display = "none";
+
+            // A seção de comida favorita aparece
+            comidaSection.style.display = "block";
+
+            // Teste para ver se o clique funcionou
+            console.log("Clicou no botão de comida.")
+        }
+
+        // Função do clique do botão da seção de livro favorito
+        function botaoLivro() {
+
+            // Todos as seções desaparecem
+            serieSection.style.display = "none";
+            hobbySection.style.display = "none";
+            comidaSection.style.display = "none";
+
+            // A seção de livro favorito aparece
+            livroSection.style.display = "block";
+
+            // Teste para ver se o clique funcionou
+            console.log("Clicou no botão de livro.")
+        }
+    </script> <!-- Aqui termina o JavaScript -->
+
 </body> <!-- Fechamento da tag body -->
 
-</html>
+</html> <!-- Fechamento da tag html -->
